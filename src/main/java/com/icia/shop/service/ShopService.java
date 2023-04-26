@@ -23,4 +23,8 @@ public class ShopService {
     public int update(MemberDTO memberDTO) {
         return shopRepository.update(memberDTO);
     }
+
+    public MemberDTO findByid(Long custno) {
+        return shopRepository.findByid(custno);
+    }
 }

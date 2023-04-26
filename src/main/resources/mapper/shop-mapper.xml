@@ -17,4 +17,7 @@
                                 ,address = #{address},joinDate = #{joinDate}
                                  ,grade = #{grade},city =#{city} where custno = #{custno}
     </update>
+    <select id="findByid" resultType="shop" parameterType="Long">
+        select * from member_tbl_02 where custno = #{custno}
+    </select>
 </mapper>

@@ -24,4 +24,9 @@ public class ShopRepository {
     public int update(MemberDTO memberDTO) {
         return sql.update("Shop.update",memberDTO);
     }
+
+    public MemberDTO findByid(Long custno) {
+        MemberDTO memberDTO = sql.selectOne("Shop.findByid",custno);
+        return memberDTO;
+    }
 }

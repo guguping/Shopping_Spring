@@ -21,31 +21,31 @@
           <form action="/update" method="post" onsubmit="return fun3()">
               <tr>
                   <th><label for="custno">회원번호</label><br></th>
-                  <td><input type="text" name="custno" value="${custno}" id="custno" readonly></td>
+                  <td><input type="text" name="custno" value="${memberDTO.custno}" id="custno" readonly></td>
               </tr>
               <tr>
                   <th><label for="custName">회원성명</label></th>
-                  <td><input type="text" name="custName" id="custName"></td>
+                  <td><input type="text" name="custName" value="${memberDTO.custName}" id="custName"></td>
               </tr>
               <tr>
                   <th><label for="phone">회원전화</label></th>
-                  <td><input type="text" name="phone" id="phone"></td>
+                  <td><input type="text" name="phone" value="${memberDTO.phone}" id="phone"></td>
               </tr>
               <tr>
                   <th><label for="address">회원주소</label></th>
-                  <td><input type="text" name="address" id="address"></td>
+                  <td><input type="text" name="address" value="${memberDTO.address}" id="address"></td>
               </tr>
               <tr>
                   <th><label for="joinDate">가입일자</label></th>
-                  <td><input type="text" name="joinDate" id="joinDate"></td>
+                  <td><input type="text" name="joinDate" value="${memberDTO.joinDate}" id="joinDate"></td>
               </tr>
               <tr>
                   <th><label for="grade">고객등급</label></th>
-                  <td><input type="text" maxlength="1" name="grade" id="grade"></td>
+                  <td><input type="text" maxlength="1" name="grade" value="${memberDTO.grade}" id="grade"></td>
               </tr>
               <tr>
                   <th><label for="city">도시코드</label></th>
-                  <td><input type="text" maxlength="2" name="city" id="city"></td>
+                  <td><input type="text" maxlength="2" name="city" value="${memberDTO.city}" id="city"></td>
               </tr>
               <tr>
                   <th></th>

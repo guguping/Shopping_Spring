@@ -35,8 +35,9 @@ public class ShopController {
     }
 
     @GetMapping("/update")
-    public String update(@RequestParam("custno") String custno,Model model){
-        model.addAttribute("custno",custno);
+    public String update(@RequestParam("custno") Long custno,Model model){
+        MemberDTO memberDTO = service.findByid(custno);
+        model.addAttribute("memberDTO",memberDTO);
         return "update";
     }
     @PostMapping("/update")
