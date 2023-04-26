@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="Shop">
+    <select id="findAll" resultType="shop">
+        select * from member_tbl_02;
+    </select>
+
+    <insert id="save" parameterType="shop">
+        insert into member_tbl_02(custName,phone,address,joinDate,grade,city)
+            values(#{custName},#{phone},#{address},#{joinDate},#{grade},#{city})
+    </insert>
+    <update id="update" parameterType="shop">
+        update member_tbl_02 set custno = #{custno}, custName = #{custName},phone = #{phone}
+                                ,address = #{address},joinDate = #{joinDate}
+                                 ,grade = #{grade},city =#{city} where custno = #{custno}
+    </update>
+</mapper>
