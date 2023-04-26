@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <script src="/resources/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
   <h2>안녕 나는 list</h2>
         <table class="table table-dark table-hover">

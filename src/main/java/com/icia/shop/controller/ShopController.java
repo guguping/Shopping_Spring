@@ -41,8 +41,7 @@ public class ShopController {
     }
     @PostMapping("/update")
     public String updateFaram(@ModelAttribute MemberDTO memberDTO , Model model){
-        System.out.println("memberDTO = " + memberDTO);
-        service.update(memberDTO);
-        return "redirect:/list";
+        model.addAttribute("updateResult",service.update(memberDTO));
+        return "updateResult";
     }
 }

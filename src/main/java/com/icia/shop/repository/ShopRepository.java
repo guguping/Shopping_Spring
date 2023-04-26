@@ -21,7 +21,7 @@ public class ShopRepository {
         return sql.insert("Shop.save",memberDTO);
     }
 
-    public void update(MemberDTO memberDTO) {
-        sql.update("Shop.update",memberDTO);
+    public int update(MemberDTO memberDTO) {
+        return sql.update("Shop.update",memberDTO);
     }
 }

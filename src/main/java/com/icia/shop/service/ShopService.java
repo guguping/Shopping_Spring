@@ -20,7 +20,7 @@ public class ShopService {
         return shopRepository.save(memberDTO);
     }
 
-    public void update(MemberDTO memberDTO) {
-        shopRepository.update(memberDTO);
+    public int update(MemberDTO memberDTO) {
+        return shopRepository.update(memberDTO);
     }
 }
