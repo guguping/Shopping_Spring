@@ -15,43 +15,24 @@
 <body>
 <h2>홈쇼핑 회원 등록</h2>
 <div class="container" style="width: 300px;margin: auto">
-  <table class="table-bordered" style="text-align: center">
     <form action="/saveParam" method="post" onsubmit="return fun3()">
-      <tr>
-        <th><label for="custno">회원번호</label></th>
-        <td><input type="text" name="custno" placeholder="자동발생" id="custno" readonly></td>
-      </tr>
-      <tr>
-        <th><label for="custName">회원성명</label></th>
-        <td><input type="text" name="custName" id="custName"></td>
-      </tr>
-      <tr>
-        <th><label for="phone">회원전화</label></th>
-        <td><input type="text" name="phone" id="phone"></td>
-      </tr>
-      <tr>
-        <th><label for="address">회원주소</label></th>
-        <td><input type="text" name="address" id="address"></td>
-      </tr>
-      <tr>
-        <th><label for="joinDate">가입일자</label></th>
-        <td><input type="text" name="joinDate" id="joinDate"></td>
-      </tr>
-      <tr>
-        <th><label for="grade">고객등급</label></th>
-        <td><input type="text" maxlength="1" name="grade" id="grade"></td>
-      </tr>
-      <tr>
-        <th><label for="city">도시코드</label></th>
-        <td><input type="text" maxlength="2" name="city" id="city"></td>
-      </tr>
-      <tr>
-        <th></th>
-        <td><button>등록</button>
-        <button type="button" onclick="fun2()">취소</button></td>
-      </tr>
+        <label for="custno">회원번호</label>
+        <input type="text" name="custno" placeholder="자동발생" id="custno" readonly>
+        <label for="custName">회원성명</label>
+        <input type="text" name="custName" id="custName">
+        <label for="phone">회원전화</label>
+        <input type="text" name="phone" id="phone">
+        <label for="address">회원주소</label>
+        <input type="text" name="address" id="address">
+        <label for="joinDate">가입일자</label>
+        <input type="text" name="joinDate" id="joinDate">
+        <label for="grade">고객등급</label>
+        <input type="text" maxlength="1" name="grade" id="grade">
+        <label for="city">도시코드</label>
+        <input type="text" maxlength="2" name="city" id="city">
+        <button>등록</button>
+        <button type="button" onclick="fun2()">취소</button>
     </form>
-  </table>
 </div>
 </body>
 <script>

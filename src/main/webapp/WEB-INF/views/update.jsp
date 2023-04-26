@@ -17,43 +17,24 @@
   <h2>안녕 나는 h2</h2>
 
   <div class="container" style="width: 300px;margin: auto">
-      <table class="table-bordered" style="text-align: center">
-          <form action="/update" method="post" onsubmit="return fun3()">
-              <tr>
-                  <th><label for="custno">회원번호</label><br></th>
-                  <td><input type="text" name="custno" value="${memberDTO.custno}" id="custno" readonly></td>
-              </tr>
-              <tr>
-                  <th><label for="custName">회원성명</label></th>
-                  <td><input type="text" name="custName" value="${memberDTO.custName}" id="custName"></td>
-              </tr>
-              <tr>
-                  <th><label for="phone">회원전화</label></th>
-                  <td><input type="text" name="phone" value="${memberDTO.phone}" id="phone"></td>
-              </tr>
-              <tr>
-                  <th><label for="address">회원주소</label></th>
-                  <td><input type="text" name="address" value="${memberDTO.address}" id="address"></td>
-              </tr>
-              <tr>
-                  <th><label for="joinDate">가입일자</label></th>
-                  <td><input type="text" name="joinDate" value="${memberDTO.joinDate}" id="joinDate"></td>
-              </tr>
-              <tr>
-                  <th><label for="grade">고객등급</label></th>
-                  <td><input type="text" maxlength="1" name="grade" value="${memberDTO.grade}" id="grade"></td>
-              </tr>
-              <tr>
-                  <th><label for="city">도시코드</label></th>
-                  <td><input type="text" maxlength="2" name="city" value="${memberDTO.city}" id="city"></td>
-              </tr>
-              <tr>
-                  <th></th>
-                  <td><button>등록</button>
-                      <button type="button" onclick="fun2()">취소</button></td>
-              </tr>
-          </form>
-      </table>
+      <form action="/update" method="post" onsubmit="return fun3()">
+          <label for="custno">회원번호</label>
+          <input type="text" name="custno" value="${memberDTO.custno}" id="custno" readonly>
+          <label for="custName">회원성명</label>
+          <input type="text" name="custName" value="${memberDTO.custName}" id="custName">
+          <label for="phone">회원전화</label>
+          <input type="text" name="phone" value="${memberDTO.phone}" id="phone">
+          <label for="address">회원주소</label>
+          <input type="text" name="address" value="${memberDTO.address}" id="address">
+          <label for="joinDate">가입일자</label>
+          <input type="text" name="joinDate" value="${memberDTO.joinDate}" id="joinDate">
+          <label for="grade">고객등급</label>
+          <input type="text" maxlength="1" name="grade" value="${memberDTO.grade}" id="grade">
+          <label for="city">도시코드</label>
+          <input type="text" maxlength="2" name="city" value="${memberDTO.city}" id="city">
+          <button>등록</button>
+          <button type="button" onclick="fun2()">취소</button>
+      </form>
   </div>
   <a href="/" style="text-decoration-line : none">인덱스로 이동</a>
 </body>
