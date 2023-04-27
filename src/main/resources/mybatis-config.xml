@@ -4,5 +4,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.icia.shop.dto.MemberDTO" alias="shop"></typeAlias>
+        <typeAlias type="com.icia.shop.dto.MoneyDTO" alias="shop1"></typeAlias>
     </typeAliases>
 </configuration>

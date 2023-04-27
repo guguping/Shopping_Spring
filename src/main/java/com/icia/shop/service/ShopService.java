@@ -1,6 +1,7 @@
 package com.icia.shop.service;
 
 import com.icia.shop.dto.MemberDTO;
+import com.icia.shop.dto.MoneyDTO;
 import com.icia.shop.repository.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,9 @@ public class ShopService {
 
     public MemberDTO findByid(Long custno) {
         return shopRepository.findByid(custno);
+    }
+
+    public List<MoneyDTO> membersales() {
+        return shopRepository.membersales();
     }
 }

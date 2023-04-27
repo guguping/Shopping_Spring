@@ -5,7 +5,11 @@
 
 <mapper namespace="Shop">
     <select id="findAll" resultType="shop">
-        select * from member_tbl_02;
+        select custno,custName,phone,address,joinDate,case
+            when grade = 'A' then 'VIP'
+            when grade = 'B' then '일반'
+            when grade = 'C' then '직원'
+            else '없음' end as grade , city from member_tbl_02;
     </select>
 
     <insert id="save" parameterType="shop">
@@ -19,5 +23,15 @@
     </update>
     <select id="findByid" resultType="shop" parameterType="Long">
         select * from member_tbl_02 where custno = #{custno}
+    </select>
+    <select id="membersales" resultType="shop1">
+        select m1.custno,m1.custName,case
+                                         when m1.grade = 'A' then 'VIP'
+                                         when m1.grade = 'B' then '일반'
+                                         when m1.grade = 'C' then '직원'
+                                         else '없음'
+            end as grade,sum(m2.price) as price
+        from member_tbl_02 m1 , money_tbl_02 m2
+        where m1.custno=m2.custno group by m1.custno order by sum(m2.price) desc;
     </select>
 </mapper>

@@ -61,12 +61,6 @@
 <%@include file="./component/footer.jsp" %>
 </body>
 <script>
-    const fun1 = () => {
-        location.href = "/save";
-    }
-    const fun2 = () => {
-        location.href = "/list";
-    }
     const fun3 = () => {
         location.href = "/"
     }
@@ -79,9 +73,6 @@
         } else {
             return true;
         }
-    }
-    const fun5 = () => {
-        location.href = "/";
     }
 </script>
 </html>

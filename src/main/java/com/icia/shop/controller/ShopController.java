@@ -1,6 +1,7 @@
 package com.icia.shop.controller;
 
 import com.icia.shop.dto.MemberDTO;
+import com.icia.shop.dto.MoneyDTO;
 import com.icia.shop.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,5 +48,11 @@ public class ShopController {
     public String updateFaram(@ModelAttribute MemberDTO memberDTO , Model model){
         model.addAttribute("updateResult",service.update(memberDTO));
         return "updateResult";
+    }
+    @GetMapping("/membersales")
+    public String membersales(Model model){
+        List<MoneyDTO> mList = service.membersales();
+        model.addAttribute("mList",mList);
+        return "membersales";
     }
 }

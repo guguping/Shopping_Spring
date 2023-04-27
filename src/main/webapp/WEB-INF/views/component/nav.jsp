@@ -7,9 +7,23 @@
     <a onclick="fun2()">회원목록조회/수정</a>
   </li>
   <li>
-    <a onclick="">회원매출조회</a>
+    <a onclick="money()">회원매출조회</a>
   </li>
   <li>
     <a onclick="fun5()">홈으로</a>
   </li>
 </div>
+<script>
+  const fun1 = ()=>{
+    location.href = "/save";
+  }
+  const fun2 = () => {
+    location.href = "/list";
+  }
+  const fun5 = () => {
+    location.href = "/";
+  }
+  const money = () =>{
+    location.href = "/membersales";
+  }
+</script>

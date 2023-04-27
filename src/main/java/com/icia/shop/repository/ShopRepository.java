@@ -1,6 +1,7 @@
 package com.icia.shop.repository;
 
 import com.icia.shop.dto.MemberDTO;
+import com.icia.shop.dto.MoneyDTO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -34,5 +35,10 @@ public class ShopRepository {
     public MemberDTO findByid(Long custno) {
         MemberDTO memberDTO = sql.selectOne("Shop.findByid",custno);
         return memberDTO;
+    }
+
+    public List<MoneyDTO> membersales() {
+        List<MoneyDTO>mList = sql.selectList("Shop.membersales");
+        return mList;
     }
 }

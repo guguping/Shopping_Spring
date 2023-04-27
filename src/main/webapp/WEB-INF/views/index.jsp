@@ -27,15 +27,4 @@
     </div>
 <%@include file="./component/footer.jsp"%>
 </body>
-<script>
-    const fun1 = ()=>{
-        location.href = "/save";
-    }
-    const fun2 = () => {
-        location.href = "/list";
-    }
-    const fun5 = () => {
-        location.href = "/";
-    }
-</script>
 </html>
