@@ -10,11 +10,15 @@
 <html>
 <head>
     <title>list</title>
-    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+<%--    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">--%>
     <script src="/resources/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
-  <h2>안녕 나는 list</h2>
+<%@include file="./component/header.jsp"%>
+<%@include file="./component/nav.jsp"%>
+<div class="container" id="section">
+    <h2 id="titail">홈쇼핑 회원 리스트</h2>
         <table class="table table-dark table-hover">
             <tr>
                 <th>회원번호</th>
@@ -27,7 +31,7 @@
             </tr>
             <c:forEach items="${mList}" var="s">
             <tr>
-                <td><a href="/update?custno=${s.custno}">${s.custno}</a></td>
+                <td><a href="/update?custno=${s.custno}" style="text-decoration: none">${s.custno}</a></td>
                 <td>${s.custName}</td>
                 <td>${s.phone}</td>
                 <td>${s.address}</td>
@@ -37,6 +41,18 @@
             </tr>
             </c:forEach>
         </table>
-    <a href="/" style="text-decoration-line : none">인덱스로 이동</a>
+</div>
+<%@include file="./component/footer.jsp"%>
 </body>
+<script>
+    const fun1 = ()=>{
+        location.href = "/save";
+    }
+    const fun2 = () => {
+        location.href = "/list";
+    }
+    const fun5 = () => {
+        location.href="/";
+    }
+</script>
 </html>

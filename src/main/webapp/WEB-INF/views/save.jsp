@@ -9,37 +9,81 @@
 <html>
 <head>
     <title>save</title>
-  <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+<%--  <link rel="stylesheet" href="/resources/css/bootstrap.min.css">--%>
   <script src="/resources/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
-<h2>홈쇼핑 회원 등록</h2>
-<div class="container" style="width: 300px;margin: auto">
-    <form action="/saveParam" method="post" onsubmit="return fun3()">
-        <label for="custno">회원번호</label>
-        <input type="text" name="custno" placeholder="자동발생" id="custno" readonly>
-        <label for="custName">회원성명</label>
-        <input type="text" name="custName" id="custName">
-        <label for="phone">회원전화</label>
-        <input type="text" name="phone" id="phone">
-        <label for="address">회원주소</label>
-        <input type="text" name="address" id="address">
-        <label for="joinDate">가입일자</label>
-        <input type="text" name="joinDate" id="joinDate">
-        <label for="grade">고객등급</label>
-        <input type="text" maxlength="1" name="grade" id="grade">
-        <label for="city">도시코드</label>
-        <input type="text" maxlength="2" name="city" id="city">
-        <button>등록</button>
-        <button type="button" onclick="fun2()">취소</button>
-    </form>
+<%@include file="./component/header.jsp"%>
+<%@include file="./component/nav.jsp"%>
+<div class="container" id="section">
+    <h2 id="titail">홈쇼핑 회원 등록</h2>
+<form action="/saveParam" method="post" onsubmit="return fun4()">
+    <table>
+        <tr>
+            <th>회원번호</th>
+            <td>
+                <input type="text" name="custno" placeholder="자동발생" id="custno" readonly>
+            </td>
+        </tr>
+        <tr>
+            <th>회원성명</th>
+            <td>
+                <input type="text" name="custName">
+            </td>
+        </tr>
+        <tr>
+            <th>회원전화</th>
+            <td>
+                <input type="text" name="phone" size="30">
+            </td>
+        </tr>
+        <tr>
+            <th>회원주소</th>
+            <td>
+                <input type="text" name="address" size="50">
+            </td>
+        </tr>
+        <tr>
+            <th>가입일자</th>
+            <td>
+                <input type="text" name="joinDate">
+            </td>
+        </tr>
+        <tr>
+            <th>고객등급(A:VIP,B:일반,C:직원)</th>
+            <td>
+                <input type="text" name="grade">
+            </td>
+        </tr>
+        <tr>
+            <th>도시코드</th>
+            <td>
+                <input type="text" name="city">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <input style="display: inline" type="submit" value="등록">
+                <input style="display: inline" type="button" onclick="fun3()" value="취소">
+            </td>
+        </tr>
+    </table>
+</form>
 </div>
+<%@include file="./component/footer.jsp"%>
 </body>
 <script>
-    const fun2 = () =>{
+    const fun1 = ()=>{
+        location.href = "/save";
+    }
+    const fun2 = () => {
+        location.href = "/list";
+    }
+    const fun3 = () =>{
         location.href = "/"
     }
-    const fun3 = ()=>{
+    const fun4 = ()=>{
       const cust_Name = document.getElementById("custName");
       if (cust_Name.value.length == 0){
         alert("회원성명이 입력되지 않았습니다");
@@ -48,6 +92,9 @@
       }else{
         return true;
       }
+    }
+    const fun5 = () => {
+        location.href="/";
     }
 </script>
 </html>
