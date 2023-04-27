@@ -35,7 +35,7 @@
         location.href = "/list";
     }
     const fun5 = () => {
-        location.href="/";
+        location.href = "/";
     }
 </script>
 </html>

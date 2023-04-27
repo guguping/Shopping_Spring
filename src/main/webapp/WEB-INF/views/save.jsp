@@ -29,7 +29,7 @@
         <tr>
             <th>회원성명</th>
             <td>
-                <input type="text" name="custName">
+                <input type="text" name="custName" id="custName">
             </td>
         </tr>
         <tr>
@@ -53,13 +53,13 @@
         <tr>
             <th>고객등급(A:VIP,B:일반,C:직원)</th>
             <td>
-                <input type="text" name="grade">
+                <input type="text" name="grade" maxlength="1">
             </td>
         </tr>
         <tr>
             <th>도시코드</th>
             <td>
-                <input type="text" name="city">
+                <input type="text" name="city" maxlength="2">
             </td>
         </tr>
         <tr>

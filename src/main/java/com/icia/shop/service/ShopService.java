@@ -16,7 +16,7 @@ public class ShopService {
         return shopRepository.findAll();
     }
 
-    public int save(MemberDTO memberDTO) {
+    public boolean save(MemberDTO memberDTO) {
         return shopRepository.save(memberDTO);
     }
 

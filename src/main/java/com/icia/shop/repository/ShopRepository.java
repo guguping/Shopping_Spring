@@ -17,8 +17,14 @@ public class ShopRepository {
         return mList;
     }
 
-    public int save(MemberDTO memberDTO) {
-        return sql.insert("Shop.save",memberDTO);
+    public boolean save(MemberDTO memberDTO) {
+        try {
+            sql.insert("Shop.save", memberDTO);
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public int update(MemberDTO memberDTO) {

@@ -23,9 +23,12 @@ public class ShopController {
     }
     @PostMapping("/saveParam")
     public String saveParam(@ModelAttribute MemberDTO memberDTO){
-        System.out.println("memberDTO = " + memberDTO);
-        int saveResult = service.save(memberDTO);
-        return "redirect:/list";
+        boolean saveResult = service.save(memberDTO);
+        if(saveResult) {
+            return "redirect:/list";
+        }else{
+            return "errorPage";
+        }
     }
     @GetMapping("/list")
     public String findAll(Model model){
