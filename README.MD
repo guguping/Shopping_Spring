@@ -78,3 +78,4 @@ preventDefault 새로 배움<br>
 -   component폴더 만들고 include써보기
 -   try cach 를 사용하여 save404에러 잡기
 
+## save.jsp colspan 사용
